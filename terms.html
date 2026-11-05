@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="description" content="Terms of Service & End User License Agreement (EULA) for Sako Real Estate Mobile Application.">
-    <title>Terms of Service (EULA) — Sako Real Estate</title>
+    <meta name="description" content="Terms of Service and End User License Agreement (EULA) for SAKO Real Estate Mobile Platform (iOS & Android).">
+    <title>Terms of Service &amp; EULA — SAKO Real Estate Platform</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -17,17 +17,19 @@
             --muted: #64748B;
             --light: #F8FAFC;
             --card-border: #E2E8F0;
+            --card-bg: #FFFFFF;
         }
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
         body {
             background-color: #FAFAFC;
             color: var(--dark);
             line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
         }
         header {
             background: #FFFFFF;
@@ -38,7 +40,7 @@
             z-index: 100;
         }
         .container {
-            max-width: 960px;
+            max-width: 920px;
             margin: 0 auto;
             padding: 0 24px;
         }
@@ -88,44 +90,67 @@
             color: var(--slate);
             font-size: 14px;
             font-weight: 600;
+            transition: color 0.2s;
         }
         .nav-links a:hover, .nav-links a.active {
             color: var(--primary-dark);
         }
         .content-card {
-            background: #FFFFFF;
+            background: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 20px;
             padding: 48px;
-            margin: 40px 0;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+            margin: 40px 0 60px 0;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+        }
+        @media (max-width: 680px) {
+            .content-card {
+                padding: 28px 20px;
+            }
         }
         h2.title {
             font-size: 32px;
             font-weight: 800;
-            letter-spacing: -0.5px;
+            letter-spacing: -1px;
             margin-bottom: 8px;
         }
         .meta-date {
+            font-size: 13px;
             color: var(--muted);
-            font-size: 13.5px;
+            margin-bottom: 28px;
             font-weight: 600;
-            margin-bottom: 32px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--card-border);
+        }
+        .highlight-box {
+            background: #F0FDF4;
+            border: 1px solid #BBF7D0;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 24px 0 32px 0;
+        }
+        .highlight-box h4 {
+            color: #166534;
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .highlight-box p {
+            color: #14532D;
+            font-size: 14px;
+            line-height: 1.6;
         }
         h3 {
             font-size: 20px;
             font-weight: 800;
+            margin: 36px 0 14px 0;
             color: var(--dark);
-            margin: 28px 0 10px;
+            letter-spacing: -0.3px;
         }
         p {
-            color: var(--slate);
             font-size: 15px;
+            color: var(--slate);
             margin-bottom: 16px;
         }
-        ul {
+        ul, ol {
             margin: 12px 0 20px 24px;
             color: var(--slate);
             font-size: 15px;
@@ -133,29 +158,13 @@
         li {
             margin-bottom: 8px;
         }
-        .highlight-box {
-            background: #EEF2FF;
-            border: 1px solid #C7D2FE;
-            border-radius: 14px;
-            padding: 20px 24px;
-            margin: 24px 0;
-        }
-        .highlight-box h4 {
-            color: #3730A3;
-            font-weight: 800;
-            font-size: 16px;
-            margin-bottom: 6px;
-        }
-        .highlight-box p {
-            color: #312E81;
-            margin-bottom: 0;
-            font-size: 14.5px;
+        strong {
+            color: var(--dark);
         }
         footer {
-            margin-top: 64px;
+            background: #FFFFFF;
             border-top: 1px solid var(--card-border);
             padding: 36px 0;
-            background: white;
             text-align: center;
             font-size: 13px;
             color: var(--muted);
@@ -166,13 +175,8 @@
             font-weight: 600;
             margin: 0 10px;
         }
-        @media (max-width: 768px) {
-            .content-card {
-                padding: 28px;
-            }
-            .nav-links {
-                display: none;
-            }
+        footer a:hover {
+            color: var(--primary-dark);
         }
     </style>
 </head>
@@ -187,7 +191,7 @@
                 </div>
             </a>
             <nav class="nav-links">
-                <a href="index.html">Support</a>
+                <a href="index.html">Help Center</a>
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html" class="active">Terms of Service</a>
             </nav>
@@ -196,52 +200,63 @@
 
     <main class="container">
         <div class="content-card">
-            <h2 class="title">Terms of Service & EULA</h2>
-            <div class="meta-date">Last Updated: November 05, 2026 &bull; Published by SD Soft</div>
+            <h2 class="title">Terms of Service &amp; EULA</h2>
+            <div class="meta-date">Effective Date: November 05, 2026 &bull; Published by SD Soft</div>
 
-            <p>Welcome to <strong>Sako</strong>. These Terms of Service and End User License Agreement ("Terms") constitute a legally binding agreement between you ("User") and <strong>SD Soft</strong> ("Publisher") regarding your access to and use of the Sako mobile application on iOS and iPadOS.</p>
+            <p>These Terms of Service and End User License Agreement ("Terms") govern your access to and use of the <strong>SAKO</strong> mobile applications (available on iOS and Android), website, and digital services operated by <strong>SD Soft</strong> ("we," "us," or "Publisher").</p>
 
             <div class="highlight-box">
-                <h4>Apple Standard EULA Acknowledgement</h4>
-                <p>By downloading or using Sako from the Apple App Store, you agree to comply with both these Terms and Apple’s Licensed Application End User License Agreement. If you do not accept these terms, do not install or use the application.</p>
+                <h4>Binding Agreement &amp; Acceptance</h4>
+                <p>By creating an account, downloading, accessing, or using the SAKO platform, you acknowledge that you have read, understood, and agree to be legally bound by these Terms and our Privacy Policy. If you do not agree with any part of these Terms, you must discontinue use and uninstall the application immediately.</p>
             </div>
 
-            <h3>1. Property Listings & Accuracy Standards</h3>
-            <p>Sako operates as a premium architectural real estate marketplace. Users and agencies publishing listings warrant that:</p>
+            <h3>1. License Grant &amp; Scope of Use</h3>
+            <p>Subject to your continuous compliance with these Terms, SD Soft grants you a personal, revocable, non-exclusive, non-transferable, and non-sublicensable license to install and use the SAKO application on personal mobile devices that you own or control, solely for legitimate real estate discovery, architectural media viewing, and property listing purposes.</p>
+
+            <h3>2. Marketplace Integrity &amp; Property Listing Standards</h3>
+            <p>SAKO is committed to maintaining a trustworthy, verified property marketplace. Users, homeowners, and real estate agencies publishing listings warrant that:</p>
             <ul>
-                <li>The property is genuinely available for sale or rent with legally verifiable ownership.</li>
-                <li>All provided specifications (bedrooms, bathrooms, area dimensions, pricing, and geolocation coordinates) are accurate and not misleading.</li>
-                <li>Spam, duplicate postings, and deceptive bait-and-switch pricing are strictly forbidden and result in immediate listing deletion.</li>
+                <li>They hold legitimate ownership, title, or written authorization from the property owner to represent and advertise the property.</li>
+                <li>All provided specifications—including pricing, physical dimensions, location, zoning, and availability—are accurate, truthful, and up-to-date.</li>
+                <li>Deceptive bait-and-switch listings, ghost inventory, artificially inflated pricing, and duplicate spam postings are strictly prohibited and will result in immediate removal and account sanctions.</li>
             </ul>
 
-            <h3>2. User-Generated Content & Zero-Tolerance Policy (Reels & Comments)</h3>
-            <p>Per Apple Safety Guidelines (Guideline 1.2):</p>
+            <h3>3. User Conduct &amp; Content Moderation (Reels, Media &amp; Messages)</h3>
+            <p>To preserve a professional, safe, and respectful environment across all platforms, SAKO enforces a strict zero-tolerance policy:</p>
             <ul>
-                <li><strong>Prohibited Content:</strong> There is zero tolerance for objectionable, offensive, defamatory, harassing, sexually explicit, or fraudulent content. Video reels must remain strictly property-oriented and architectural.</li>
-                <li><strong>In-App Reporting:</strong> Every listing, video reel, and comment features an instant "Report" button allowing users to flag violations.</li>
-                <li><strong>Moderation Action:</strong> Reported content is reviewed by our moderation staff within 24 hours. Offending material is deleted immediately, and abusive user accounts are permanently blocked.</li>
-                <li><strong>Blocking Users:</strong> Users can block other accounts directly from their profile screen to stop all communications and hide their listings.</li>
+                <li><strong>Prohibited Content:</strong> Users may not upload, transmit, or share any material that is defamatory, harassing, threatening, hateful, discriminatory, sexually explicit, or fraudulent. Video reels must remain strictly focused on property architecture, real estate tours, and design.</li>
+                <li><strong>In-App Reporting:</strong> Every listing, video reel, and comment features an accessible "Report" mechanism. Users can flag objectionable content or policy violations instantly.</li>
+                <li><strong>24-Hour Moderation Window:</strong> Our safety team reviews all reported content within 24 hours. Material found in violation of our guidelines is removed immediately without notice.</li>
+                <li><strong>Account Termination:</strong> Users or agencies engaging in repeated violations, abusive conduct, or fraudulent activities are permanently banned from the platform.</li>
+                <li><strong>User Blocking:</strong> Users can block any account at any time directly within the application, immediately hiding all listings, video reels, and messages from that account.</li>
             </ul>
 
-            <h3>3. Tour Scheduling & Third-Party Dealings</h3>
-            <p>Sako facilitates property discovery and tour appointment scheduling between buyers and verified agencies. Sako is not a direct financial escrow or notary party to external property title transfers, independent contracts, or off-platform financial transactions.</p>
-
-            <h3>4. In-App Subscriptions & Billing</h3>
-            <p>Agency membership upgrades and premium listing quotas are billed securely through Apple In-App Purchases (IAP) via your Apple ID:</p>
+            <h3>4. Tour Scheduling &amp; Independence of Real Estate Transactions</h3>
+            <p>SAKO provides digital tools to facilitate communication and tour appointments between prospective buyers, tenants, and verified real estate agencies. You acknowledge that:</p>
             <ul>
-                <li>Payment will be charged to your Apple ID account at confirmation of purchase.</li>
-                <li>Subscriptions automatically renew unless auto-renew is turned off at least 24 hours before the end of the current period.</li>
-                <li>You may manage or turn off auto-renewal at any time in your iPhone / iPad Account Settings after purchase.</li>
+                <li>SAKO is a technology discovery platform and is not an escrow agent, broker of record, title insurer, or legal representative for external transactions.</li>
+                <li>All property inspections, contractual agreements, financial payments, and deed registrations are conducted independently between the buyer, seller, and authorized legal entities.</li>
             </ul>
 
-            <h3>5. Intellectual Property</h3>
-            <p>The Sako logo, mobile user interface, algorithmic property matching system, and proprietary branding are the exclusive property of SD Soft and protected under international copyright and trademark laws.</p>
+            <h3>5. In-App Purchases &amp; Agency Subscriptions</h3>
+            <p>Optional agency membership tiers, listing boost features, and quota packages may be offered within the application:</p>
+            <ul>
+                <li><strong>Billing Processing:</strong> All in-app purchases and subscriptions are processed securely through the native billing platform of your device operating system (Apple In-App Purchases on iOS / Google Play In-App Billing on Android).</li>
+                <li><strong>Subscription Renewal:</strong> Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current billing cycle.</li>
+                <li><strong>Subscription Management:</strong> You can manage, update, or cancel your active subscription at any time via your device's operating system settings (Apple ID Settings on iOS / Google Play Store Account Subscriptions on Android).</li>
+            </ul>
 
-            <h3>6. Account Termination</h3>
-            <p>We reserve the right to suspend or terminate accounts that breach these Terms, attempt unauthorized system scraping, engage in spamming, or abuse other users.</p>
+            <h3>6. Intellectual Property Rights</h3>
+            <p>The SAKO brand, logo, mobile user interface, proprietary algorithms, database schemas, and codebase are the exclusive intellectual property of SD Soft and are protected under international copyright, trademark, and trade secret laws. You agree not to reverse engineer, decompile, scrape, or duplicate any portion of the service without explicit written authorization.</p>
 
-            <h3>7. Governing Law & Contact</h3>
-            <p>These terms are governed by applicable commercial laws in the Kurdistan Region and Iraq. For legal inquiries or support, contact:</p>
+            <h3>7. Warranty Disclaimers &amp; Limitation of Liability</h3>
+            <p>The SAKO platform and its content are provided on an "as is" and "as available" basis without warranties of any kind, whether express or implied. To the maximum extent permitted by applicable law, SD Soft disclaims all warranties, including merchantability, fitness for a particular purpose, and non-infringement. In no event shall SD Soft be liable for any indirect, incidental, special, consequential, or punitive damages arising from your access to or inability to use the platform.</p>
+
+            <h3>8. Governing Law &amp; Dispute Resolution</h3>
+            <p>These Terms shall be governed by and construed in accordance with the applicable laws of the Kurdistan Region and the Republic of Iraq, without giving effect to conflict of law principles. Any dispute arising under or in connection with these Terms shall be resolved in the competent commercial courts located in Erbil.</p>
+
+            <h3>9. Legal Contact &amp; Inquiries</h3>
+            <p>For any legal notices, questions regarding these Terms, or support issues, please contact our legal and customer support department:</p>
             <ul>
                 <li><strong>Email:</strong> <a href="mailto:sdsoftteach@gmail.com">sdsoftteach@gmail.com</a></li>
                 <li><strong>Customer Support Phone:</strong> +964 750 460 0496</li>
@@ -253,11 +268,11 @@
     <footer>
         <div class="container">
             <p style="margin-bottom: 12px;">
-                <a href="index.html">Support Center</a> &bull; 
+                <a href="index.html">Help Center</a> &bull; 
                 <a href="privacy.html">Privacy Policy</a> &bull; 
-                <a href="terms.html">Terms of Service (EULA)</a>
+                <a href="terms.html">Terms of Service</a>
             </p>
-            <p>&copy; 2026 Sako Real Estate &bull; SD Soft. All rights reserved.</p>
+            <p>&copy; 2026 SAKO Real Estate &bull; SD Soft. All rights reserved.</p>
         </div>
     </footer>
 </body>
